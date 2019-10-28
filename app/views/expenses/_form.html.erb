@@ -8,7 +8,8 @@
 
 	
 <div class="container">
-
+<div class="page-header">
+   
 
 <%= form_for @expense do |f| %>
  
@@ -27,12 +28,12 @@
   <% end %>
  <div class="jumbotron">
   <p>
-    <%= f.label :description %><br>
+    <%= f.label :description %>
     <%= f.text_field :description %>
   </p>
  
   <p>
-    <%= f.label :price %><br>
+    <%= f.label :price %>
     <%= f.number_field :price %>
   </p>
  
