@@ -1,3 +1,7 @@
+<div class="entry">
+	<%= @i = 0 %>
+	</div>
+
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -5,8 +9,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <div class="container">
 	<div class="page-header">
-<button type = button, class = class: "btn btn-primary"><%= link_to 'Register' , controller: 'users' %></button> <br>		
-<h1> Welcome!</h1>
+	
+<h1> Welcome, </h1>
 
 </div>
 
@@ -23,7 +27,25 @@
 	<br>
 	<h1>Here is what you could have purchased from your wishlist:</h1><br>
 
-	
+	<table style ="margin-left:auto;margin-right:auto;">
+  <tr>
+    <th>Description</th>
+    <th>Price</th>
+    
+  </tr>
+  
+    <% @missed.each do |wishlist| %>
+	 <% next if @i+wishlist.price >= Expense.sum('price') %>
+	<%= @i += wishlist.price %>
+	<tr>
+      <td><%= wishlist.description %></td>
+      <td><%= number_to_currency(wishlist.price) %></td>
+      </tr>
+      <% next if @i >= Expense.sum('price') %>
+
+      <% end %>
+      </tr>
+      </table>
 	
 	
 	

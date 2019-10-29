@@ -7,7 +7,7 @@ resources :expenses
 resources :session
 resources :users
 resources :wishlists
-resources :welcome
+resources :welcome 
 
 root 'session#index'
 

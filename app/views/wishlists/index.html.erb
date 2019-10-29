@@ -34,27 +34,3 @@
     </tr>
   <% end %>
 
-</table>
-</div>
-<button type = button, class = class: "btn btn-primary"><%= link_to 'Home', controller: 'welcome' %></button>
-<br><button type = button, class = class: "btn btn-primary"><%= link_to 'Log Out', controller: 'session' %></button>
-	<table>
-  <tr>
-    <th>Description</th>
-    <th>Price</th>
-    
-  </tr>
-  
-	<%= @i = 0 %>
-    <% @wishlists.each do |wishlist| %>
-	 <% next if @i+wishlist.price >= Expense.sum('price') %>
-	<%= @i += wishlist.price %>
-	<tr>
-      <td><%= wishlist.description %></td>
-      <td><%= number_to_currency(wishlist.price) %></td>
-      </tr>
-      <% next if @i >= Expense.sum('price') %>
-
-      <% end %>
-      </tr>
-      </table>

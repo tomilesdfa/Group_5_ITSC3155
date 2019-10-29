@@ -32,3 +32,9 @@ table, th, td {
   border: 1px solid black;
 }
 tr:hover:not(:first-child) {background-color: yellow;}
+.entry {
+  visibility:hidden;
+}
+.entry * {
+  visibility:visible;
+}

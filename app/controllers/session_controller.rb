@@ -2,6 +2,7 @@ class SessionController < ApplicationController
     
     def index
         @sessions = Session.all
+        
  end
  
   def show
