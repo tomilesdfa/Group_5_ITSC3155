@@ -1,7 +1,7 @@
 class WishlistsController < ApplicationController
 def index
         @wishlists = Wishlist.all
-    
+    end
     def show
         @wishlist = Wishlist.find(params[:id])
     end
@@ -50,5 +50,5 @@ def wishlist_params
     params.require(:wishlist).permit(:description, :price)
 end
 
-end
+
 

@@ -1,10 +1,13 @@
 Blog::Application.routes.draw do
   get "welcome/index"
+  get "wishlists/index"
+  get "expenses/index"
 resources :articles
 resources :expenses
 resources :session
 resources :users
 resources :wishlists
+resources :welcome
 
 root 'session#index'
 
