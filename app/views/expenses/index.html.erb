@@ -10,11 +10,11 @@
  </div>
  <div class="jumbotron">
 
- 
+ 	<h1>You've <%= Expense.count('description') %> recorded expense(s)</h1><br>
  	<h1>So far you've spent: <%= number_to_currency(Expense.sum('price')) %> </h1><br>
 	<br>
 	
-	 <%= link_to 'New Expense' , new_expense_path %>
+	<button type = button, class = class: "btn btn-primary"> <%= link_to 'New Expense' , new_expense_path %></button><br>
 <table>
   <tr>
     <th>Description</th>
@@ -26,18 +26,18 @@
     <tr>
       <td><%= expense.description %></td>
       <td><%= number_to_currency(expense.price) %></td>
-      <td><%= link_to 'Show', expense_path(expense) %></td>
-      <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
-      <td><%= link_to 'Destroy', 
+      <td><button type = button, class = class: "btn btn-primary"><%= link_to 'Show', expense_path(expense) %></button></td>
+      <td><button type = button, class = class: "btn btn-primary"><%= link_to 'Edit', edit_expense_path(expense) %></button></td>
+      <td><button type = button, class = class: "btn btn-primary"><%= link_to 'Destroy', 
       expense_path(expense),
       method: :delete,
       data: { confirm: 'You sure?' }
-      %></td>
+      %></button></td>
       
     </tr>
   <% end %>
   
 </table>
 </div>
-<%= link_to 'Home', controller: 'welcome' %>
-<br><%= link_to 'Log Out', controller: 'session' %>
+<button type = button, class = class: "btn btn-primary"><%= link_to 'Home', controller: 'welcome' %></button>
+<br><button type = button, class = class: "btn btn-primary"><%= link_to 'Log Out', controller: 'session' %></button>

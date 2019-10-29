@@ -9,9 +9,9 @@
 <h1>Listing WishList</h1>
  </div>
  <div class="jumbotron">
- 
+ 	<h1>You've <%= Wishlist.count('description') %> recorded expense(s)</h1><br>
   <h1>You have <%= number_to_currency(Wishlist.sum('price')) %> worth of items</h1><br>
- <%= link_to 'New Wishlist Item' , new_wishlist_path %>
+ <button type = button, class = class: "btn btn-primary"><%= link_to 'New Wishlist Item' , new_wishlist_path %></button><br>
 <table>
   <tr>
     <th>Description</th>
@@ -22,17 +22,18 @@
     <tr>
       <td><%= wishlist.description %></td>
       <td><%= number_to_currency(wishlist.price) %></td>
-      <td><%= link_to 'Show', wishlist_path(wishlist) %></td>
-      <td><%= link_to 'Edit', edit_wishlist_path(wishlist) %></td>
-      <td><%= link_to 'Destroy', 
+      <td><button type = button, class = class: "btn btn-primary"><%= link_to 'Show', wishlist_path(wishlist) %></button></td>
+      <td><button type = button, class = class: "btn btn-primary"><%= link_to 'Edit', edit_wishlist_path(wishlist) %></button></td>
+      <td><button type = button, class = class: "btn btn-primary"><%= link_to 'Destroy', 
       wishlist_path(wishlist),
       method: :delete,
       data: { confirm: 'You sure?' }
-      %></td>
+      %></button></td>
       
     </tr>
   <% end %>
- </div>
+
 </table>
-<%= link_to 'Home', controller: 'welcome' %>
-<br><%= link_to 'Log Out', controller: 'session' %>
+</div>
+<button type = button, class = class: "btn btn-primary"><%= link_to 'Home', controller: 'welcome' %></button>
+<br><button type = button, class = class: "btn btn-primary"><%= link_to 'Log Out', controller: 'session' %></button>
