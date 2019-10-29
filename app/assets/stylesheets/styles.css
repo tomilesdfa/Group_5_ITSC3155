@@ -25,10 +25,10 @@ Button:active {
 }
 th, td {
   padding: 15px;
-  text-align: left;
+  
 }
 table, th, td {
     
   border: 1px solid black;
 }
-tr:hover {background-color: yellow;}
+tr:hover:not(:first-child) {background-color: yellow;}
