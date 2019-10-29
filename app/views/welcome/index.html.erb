@@ -5,11 +5,18 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <div class="container">
 	<div class="page-header">
-		
-<h1> Hello,  </h1>
+<%= link_to 'Register' , controller: 'users' %> <br>		
+<h1> Welcome!</h1>
+
 </div>
+
 <div class="jumbotron">
+	<h1>You've spent: <%= number_to_currency(Expense.sum('price')) %> this month. </h1><br>
+	<h1>You have: <%= number_to_currency(Wishlist.sum('price')) %> worth of wishlist items. </h1> <br>
+	<br>
+	<h1>Here is what you could have purchased from your wishlist:</h1><br>
 <%= link_to 'View/Add Expenses' , controller: 'expenses' %><br>
 <%= link_to 'View/Add Wishlist' , controller: 'wishlists' %><br>
-<%= link_to 'Register' , controller: 'users' %>
+
+</div>
 <br><%= link_to 'Log Out', controller: 'session' %>

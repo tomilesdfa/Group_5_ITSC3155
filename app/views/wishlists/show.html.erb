@@ -12,7 +12,7 @@
 
 <p>
     <strong>Price:</strong>
-    <%= @wishlist.price %>
+    <%= number_to_currency(@wishlist.price) %>
 </p>
 <%= link_to 'Back', controller: 'wishlists' %>
 <br><%= link_to 'Log Out', controller: 'session' %>

@@ -9,19 +9,23 @@
 <h1>Listing Expenses</h1>
  </div>
  <div class="jumbotron">
- <%= link_to 'New Expense' , new_expense_path %>
+
  
- 
+ 	<h1>So far you've spent: <%= number_to_currency(Expense.sum('price')) %> </h1><br>
+	<br>
+	
+	 <%= link_to 'New Expense' , new_expense_path %>
 <table>
   <tr>
     <th>Description</th>
     <th>Price</th>
   </tr>
- 
+
+
   <% @expenses.each do |expense| %>
     <tr>
       <td><%= expense.description %></td>
-      <td><%= expense.price %></td>
+      <td><%= number_to_currency(expense.price) %></td>
       <td><%= link_to 'Show', expense_path(expense) %></td>
       <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
       <td><%= link_to 'Destroy', 
