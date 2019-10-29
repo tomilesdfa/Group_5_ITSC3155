@@ -1,5 +1,5 @@
 <div class="entry">
-	<%= @i = 0 %>
+	<% @i = 0 %>
 	</div>
 
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -36,7 +36,7 @@
   
     <% @missed.each do |wishlist| %>
 	 <% next if @i+wishlist.price >= Expense.sum('price') %>
-	<%= @i += wishlist.price %>
+	<% @i += wishlist.price %>
 	<tr>
       <td><%= wishlist.description %></td>
       <td><%= number_to_currency(wishlist.price) %></td>
