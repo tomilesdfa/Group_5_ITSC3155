@@ -2,18 +2,22 @@ class ExpensesController < ApplicationController
  
  def index
         @expenses = Expense.all
+        @theUser = User.all
  end
 
     def show
         @expense = Expense.find(params[:id])
+         @theUser = User.all
     end
     
     def new
         @expense = Expense.new
+         @theUser = User.all
     
     end
     def create
         @expense = Expense.new(expense_params)
+         @theUser = User.all
         
         
         if @expense.save
@@ -27,9 +31,11 @@ class ExpensesController < ApplicationController
     #    render plain: params[:articles].inspect
     end
     def edit
+        @theUser = User.all
         @expense = Expense.find(params[:id])
     end
     def update
+         @theUser = User.all
         @expense = Expense.find(params[:id])
         if @expense.update(expense_params)
             redirect_to @expense

@@ -1,17 +1,21 @@
 class WishlistsController < ApplicationController
 def index
         @wishlists = Wishlist.all
+        @theUser = User.all
     end
     def show
         @wishlist = Wishlist.find(params[:id])
+         @theUser = User.all
     end
     
     def new
         @wishlist = Wishlist.new
+         @theUser = User.all
     
     end
     def create
         @wishlist = Wishlist.new(wishlist_params)
+         @theUser = User.all
         
         
         if @wishlist.save
@@ -25,9 +29,11 @@ def index
     #    render plain: params[:articles].inspect
     end
     def edit
+         @theUser = User.all
         @wishlist = Wishlist.find(params[:id])
     end
     def update
+        @theUser = User.all
         @wishlist = Wishlist.find(params[:id])
         if @wishlist.update(wishlist_params)
             redirect_to @wishlist
