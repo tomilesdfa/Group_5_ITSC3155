@@ -12,8 +12,8 @@ resources :welcome
 root 'session#index'
 
  get    'signup'  => 'users#new'
- get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
+ get    'login'   => 'session#new'
+  post   'login'   => 'session#create'
   delete 'logout'  => 'sessions#destroy'
   
 

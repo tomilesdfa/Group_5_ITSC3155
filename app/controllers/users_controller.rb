@@ -16,7 +16,7 @@ def index
         
         if @user.save
             
-            redirect_to @user
+            redirect_to :controller => 'welcome', :action => 'index'
            else
                render 'new'
         end
