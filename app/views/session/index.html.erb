@@ -23,7 +23,7 @@
       <%= f.label :password %><br>
       <%= f.text_field :password %>
  
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <%= f.submit "Log in", :onclick=> "alert('No user found, please register!')", class: "btn btn-primary" %>
     <% end %>
   
 </table>

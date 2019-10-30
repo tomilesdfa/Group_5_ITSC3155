@@ -16,21 +16,12 @@ class SessionController < ApplicationController
 end
 
 def create
-   @session = Session.new(session_params)
-    login = false
-    
-
-    
-     
-    login = true 
- 
-    
+   
   
-   if login == true
-    redirect_to welcome_index_path
-
-   else  
-        redirect_to users_path
+   @session = Session.new(session_params)
+    
+   
+        redirect_to new_user_path
    end 
     
 
@@ -45,7 +36,7 @@ def destroy
     end
 
 
-end
+
 private
 def session_params
     params.require(:session).permit(:userName, :password)
