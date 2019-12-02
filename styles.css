@@ -1,1 +1,76 @@
 label { display: inline-block; width: 210px; text-align: right; }
+
+.page-header h1, h6{
+    color: #f44336;
+}
+
+.container{
+    font-family: "Malgun Gothic", cursive, sans-serif
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 45px;
+    alignment: left;
+}
+
+h3{
+    text-align: center;
+}
+
+.jumbotron{
+    text-align:center;
+}
+.jumbotron > input{
+    text-align:left;
+}
+
+.loginbtn, signinbtn{
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 10px 130px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.expense{
+    background-color: forestgreen;
+    border: none;
+    color: white;
+    padding: 10px 130px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.expense:hover{
+    background-color: mediumseagreen;
+}
+
+
+.wishlist{
+    background-color: steelblue;
+    border: none;
+    color: white;
+    padding: 10px 130px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.wishlist:hover{
+    background-color: cadetblue;
+}
+
+
+
+
+.loginbtn:hover {
+    background-color: indianred;
+}
+
+.background {
+    text-align: center;
+}

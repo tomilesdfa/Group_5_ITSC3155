@@ -10,7 +10,7 @@
 
 
 
-<title>Please Sign In</title>   
+<title>FUNDs Log In</title>
 
 
    </head>
@@ -25,17 +25,33 @@
 	
         <form class =" login" method = "POST" action ="membership?action=login">
         <div class="page-header">
-		<h1>Log In</h1>
+            <br>
+            <h1><b>FUNDs</b></h1>
+            <h6>Financially United Numismatic Dudes</h6>
+            <br>
+
 		</div>
 		<div class="jumbotron">
-    
-        <label><b>Username:		</b></label> <input type = "text" name = "userName" /><br>
-        <label><b>Password: 	</b></label> <input type = "text" name = "password" /><br>
-		<button type = "submit">Log In</buttton>
+        <h3>Member Sign In</h3><br>
+            <input class ="textbox" type = "text" name = "userName" placeholder="  Username"/><br><br>
+            <input class ="textbox" type = "text" name = "password" placeholder="  Password"/><br><br><br>
+
+            <div style="text-align: center; border: 1px">
+		<button type = "submit" class="loginbtn">Login</buttton>
+            </div>
+            <br>
+            <button type ="submit" class="btn">Not Registered? <a href="Signup.html">Create an account</a></button>
         </div>
-		<button type ="submit" class="btn btn-danger">Register Here!</button>
+
         </form>
 		</div>
 		</div>
     </body>
 </html>
+
+<Footer class="background">
+    <div class="footer">
+        <p>&#169; 2019 Financially United Numismatic Dudes</p>
+        <a href="https://validator.w3.org/check?uri=referer">Validate</a>
+    </div>
+</Footer>

@@ -20,22 +20,44 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 	
-	
+
 	<div class="container">
-	
+		<a href = "landingpage.html"></a>
+		<div class="page-header">
+			<br>
+			<h1><b>FUNDs</b></h1>
+			<h6>Financially United Numismatic Dudes</h6>
+			<br>
+
+		</div>
+		</a>
        
         <div class="page-header">
 		<label>Logged in as: ${user.getFirstName()})</label>
-		<h1>Please Enter Info Below to Add Item to WishList</h1>
 		</div>
+
 		<div class="jumbotron">
+			<h2>Please Enter Info Below to Add Item to WishList</h2>
+
+		<br>
         <br>
 		<form>
-        <label>Description:</label> <input type = text name = "description"></input><br>
-        <label>Price:</label> <input type="number" min="0.01" step="0.01" max="2500" value="00.00" name = "price"></input><br>
-		<button type =" submit">Update Wishlist</button>
+        <label>Description:</label> <input type = text name = "description"></input><br><br>
+        <label>Price of the Item:</label> <input type="number" min="0.01" step="0.01" max="2500" value="00.00" name = "price"></input><br><br>
+		<button type ="submit" class ="wishlist">Update Wishlist</button>
+			<br><br><br><br>
+			<button type ="submit" class="homebtn">Back to Home<a href="landingpage.html"></a></button>
 		</div>
-		     <button type ="submit" class="btn btn-danger">Back to Home</button>
+
 			</form>
     </body>
 </html>
+
+
+<Footer class="background">
+	<div class="footer">
+		<p>&#169; 2019 Financially United Numismatic Dudes</p>
+		<a href="https://validator.w3.org/check?uri=referer">Validate</a>
+	</div>
+	<br>
+</Footer>
