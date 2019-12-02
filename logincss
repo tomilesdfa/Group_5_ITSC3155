@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+	<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+
+
+
+<title>FUNDs Log In</title>
+
+
+   </head>
+    <body>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	
+	
+	<div class="container">
+	
+        <form class =" login" method = "POST" action ="membership?action=login">
+        <div class="page-header">
+            <br>
+            <h1><b>FUNDs</b></h1>
+            <h6>Financially United Numismatic Dudes</h6>
+            <br>
+
+		</div>
+		<div class="jumbotron">
+        <h3>Member Sign In</h3><br>
+            <input class ="textbox" type = "text" name = "userName" placeholder="  Username"/><br><br>
+            <input class ="textbox" type = "text" name = "password" placeholder="  Password"/><br><br><br>
+
+            <div style="text-align: center; border: 1px">
+		<button type = "submit" class="loginbtn">Login</buttton>
+            </div>
+            <br>
+            <button type ="submit" class="btn">Not Registered? <a href="Signup.html">Create an account</a></button>
+        </div>
+
+        </form>
+		</div>
+		</div>
+    </body>
+</html>
+
+<Footer class="background">
+    <div class="footer">
+        <p>&#169; 2019 Financially United Numismatic Dudes</p>
+        <a href="https://validator.w3.org/check?uri=referer">Validate</a>
+    </div>
+</Footer>
