@@ -22,19 +22,41 @@
 	
 	
 	<div class="container">
+
+		<div class="page-header">
+			<br>
+			<h1><b>FUNDs</b></h1>
+			<h6>Financially United Numismatic Dudes</h6>
+			<br>
+
+		</div>
 	
        
         <div class="page-header">
 		<label>Logged in as: ${user.getFirstName()})</label>
-		<h1>Welcome Back, ${User.getFirstName()}</h1>
+
 		</div>
 		<div class="jumbotron">
+			<h1>Welcome Back, ${User.getFirstName()}</h1>
         <br>
+		<br>
 		<p> You spent ${money.out} in ${money.month}</p><br>
 		<p> You missed ${wishlist.missed} items </p><br>
-		<p> Here is what you could have had instead: </p>
-		<button type = "submit">Add Expense</buttton><button type = "submit">Add Item To WishList</buttton>
+		<p> Here is what you could have had instead: </p> <br>
+
+		<button type = "submit" class ="expense">Add Expense</buttton>
+			<button type = "submit" class="wishlist">Add Item To WishList</buttton>
+
 		</div>
-		<button type ="submit" class="btn btn-danger">Log Out</button>
+
+		<button type ="submit" class="logoutbtn"> Log Out <a href="login.html"></a> </button>
+
     </body>
 </html>
+
+<Footer class="background">
+	<div class="footer">
+		<p>&#169; 2019 Financially United Numismatic Dudes</p>
+		<a href="https://validator.w3.org/check?uri=referer">Validate</a>
+	</div>
+</Footer>
