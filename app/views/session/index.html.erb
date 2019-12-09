@@ -7,25 +7,44 @@
 	<div class="container">
 	 
 	  <div class="page-header">
-	   <h1>Welcome to F.U.N.Ds</h1> <br>
-<h3>(Financially United Numismatic Dudes)</h3><br>
+	   <br>
+	   <h1>FUNDs</h1>
+<h4>Financially United Numismatic Dudes</h4><br>
 <br>
-<button type = button, class = class: "btn btn-primary"><%= link_to 'New Users' , new_user_path %></button>
+
 </div>
+
 <div class="jumbotron">
 <table>
- 
+ <h1>Member Sign In</h1>
+ <br>
+ <br>
  
   <%= form_for(:session, :url => {:controller => "session", :action => "create"}) do |f| %>
-     <%= f.label :userName %> <br>
-      <%= f.text_field :userName %><br>
-
-      <%= f.label :password %><br>
-      <%= f.text_field :password %>
- 
-      <%= f.submit "Log in", :onclick=> "alert('No user found, please register!')", class: "btn btn-primary" %>
+     
+      <%= f.text_field :userName, placeholder:"Username" %><br>
+      <br>
+      
+      <%= f.text_field :password, placeholder:"Password" %>
+      <br>
+      <br>
+      <br>
+      <%= f.submit "Login", :onclick=> "alert('No user found, please register!')", class: "btn btn-primary" %>
+      <br>
+      <br>
+      <br>
     <% end %>
   
 </table>
+<p> Don't have an account? Click here below!</p>
+<button type = button, class = class: "btn btn-primary"><%= link_to 'New Users' , new_user_path %></button>
+
 </div>
+
+<Footer class="background">
+    <div class="footer">
+        <p>&#169; 2019 Financially United Numismatic Dudes</p>
+       
+    </div>
+</Footer>
 
