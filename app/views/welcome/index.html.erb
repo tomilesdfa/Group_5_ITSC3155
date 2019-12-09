@@ -12,9 +12,9 @@
 	   <br>
 	   <h1>FUNDs</h1>
 <h5>Financially United Numismatic Dudes</h5><br><br>
-<h3> Logged in as <%= @theUser.last[:userName] %> </p><h3>
+<h6> Logged in as: <%= @theUser.last[:userName] %> </p><h6>
         </div>
-        </div>
+        
 	
 
 <div class="container">
@@ -34,7 +34,8 @@
 
       <% end %>
 	
-<h1> Welcome, <%= @theUser.last[:firstName] %> </h1>
+<h1 style="text-align: center;"> Welcome, <%= @theUser.last[:firstName] %>! </h1>
+<br>
 
 </div>
 
@@ -78,5 +79,5 @@
 	
 	
 </div>
-<br>	<button type = button, class = class: "btn btn-primary"><%= link_to 'Log Out', controller: 'session' %></button>
+<br>	<button type = button, class = class: "btn btn-primary"><%= link_to 'Log Out', controller: 'session' %></button><br>
 <br><button type = button, class = class: "btn btn-primary"><%= link_to 'ADMIN ONLY PATH TO REGISTERED USERS WONT WORK LATER', controller: 'users' %></button>

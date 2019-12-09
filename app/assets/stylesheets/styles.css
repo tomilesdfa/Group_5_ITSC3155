@@ -8,6 +8,10 @@ h2, h1, tr{
 	color: black;
 }
 
+h5{
+	color: indianred;
+}
+
 
 input[type="text"] {
     width: 300px;
@@ -21,20 +25,19 @@ input[type="text"] {
 
 .btn.btn-primary {
 	background-color: darkred;
-	margin: -85px;
 	padding: 12px 60px;
-	position: absolute;
-	top: 60%;
+	text-align: center;
+	float: none;
 }
 
 .btn.btn-danger{
- 	margin: 0px;
 	background-color: darkred;
 	padding: 12px 60px;
 	position: absolute;
 	
- 
 }
+
+
 p{
 	color: black;
 }
